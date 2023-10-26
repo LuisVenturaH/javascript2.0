@@ -13,7 +13,7 @@ for (let i = 0; i < cantidad; i++) {
     let asterisco = "";
     
     for (let j = 0; j < cantidad; j++) {
-        if (j < i+1) {
+        if (j < i + 1) {
             asterisco += "*";
         }
     }
