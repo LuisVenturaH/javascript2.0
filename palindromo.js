@@ -5,10 +5,11 @@ string es palindromo cuando se puede leer igual de izquierda a derecha que de de
  */
 
 let readline = require("readline-sync");
-let palabra = readline.question("Introduce una palabra o frase para comprobar si es palindromo: ");
+let palabra = "luissiul";
 let i = 0;
 let palindromo = true;
 
+//HECHO CON DO WHILE
 do {
     if (palabra[i] !== palabra[palabra.length - i - 1]) {
 palindromo = false;
@@ -18,3 +19,16 @@ palindromo = false;
 while ((i < palabra.length /2) && palindromo);
 
 console.log(palindromo);
+
+// HECHO CON BUCLE FOR
+
+for (i=0; i<palabra.length / 2; i++ ) {
+    if (palabra[i] != palabra[palabra.length -i -1]) {
+        palindromo = false;
+        break;
+    }
+
+} if (palindromo) {
+    console.log(`"${palabra}" es un palindromo`);
+} else{
+console.log(`"${palabra}" no es un palindromo`)}
