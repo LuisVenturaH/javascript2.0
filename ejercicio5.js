@@ -8,14 +8,13 @@
 
 let readline = require("readline-sync");
 
-let entero = Number(parseInt(readline.question("Introduzca un numero entero: ")));
-
-if (isNaN(entero)) {
-    console.log("Has introducido un caracter no valido")
+let numeroNat = [];
+function cuadraroNumerosNaturales() {
+ for (let i=0; i < 9; i++) {
+    numeroNat = numeroNat[i];
+  return numeroNat[i];
+  
+ }
+  
 }
-else if (entero < 0) {
-    console.log("Has introducido un numero negativo: " + entero)
-}
-else {
-    console.log("Has introducido un numero positivo: " + entero)
-}
+console.log(cuadraroNumerosNaturales());
