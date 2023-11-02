@@ -15,7 +15,7 @@
  * array = [21, 31, 41, 51, 61] numero = 61
  */
 
-let array1 = [4, 3, 18, 15, 10, 6];
+let array1 = [1, 3, 18, 4, 15, 10, 6];
 let array2 = [1, 2, 3, 4, 5, 6];
 let array3 = [21, 31, 41, 51, 61];
 let num1 = 18;
@@ -24,43 +24,18 @@ let num3 = 61;
 let nuevoArray = [4, 6];
 
 
-// function datos (array1, num1) {
-//     for (let i=0; i < array1.length; i++) {
-//         if (array1[i] == num1[i]) {
-//             return `La posición de ${num1} dentro del array es: ${i}`;
-//         }   
-//     }     return `No existe el numero ${num1} dentro del array `
-// }
-// console.log(datos(array2, num2));
-
-// Crea una funcion que lea un array y diga si dos numeros dados dentro otro array estan dentro del primer array
 
 
-// function datos2 (array1, nuevoArray) {
-//     for (let i=0; i < array1.length; i++) {
-//         if (array1[i] == nuevoArray[0]) {
-//             for (let j=0; j < array1.length; j++) {
-//                 if (array1[j] == nuevoArray[1]);
-//                 return `La posición de ${nuevoArray[0]} dentro del array es: ${i} y 
-//             La posición de ${nuevoArray[1]} dentro del array es: ${j}`;
-//             } 
-            
-//         }   
-//     }     return `No existe el numero ${nuevoArray[0]} o ${nuevoArray[1]} dentro del array `
-// }
-// console.log(datos2(array1, nuevoArray));
-
-function datos2 (array1, nuevoArray) {
+function datos2 (array1, num1) {
     let resultado = ["No existe", "No existe"];
-    for (let j=0; j < nuevoArray.length; j++)  {
+   
         for (let i=0; i < array1.length; i++) {
-            if (array1[i] == nuevoArray[j]) {
-                resultado[j] = i;
+            if (array1[i] == num1) {
+                resultado = i;
 
-            return `La posición de ${nuevoArray[j]} dentro del array es: ${i} y 
-            La posición de ${nuevoArray[j+1]} dentro del array es: ${j}`;
+            return `La posición de ${num1} dentro del array es: ${i}`;
             }   
         }   
-    }     return `No existe el numero ${nuevoArray[j]} o ${nuevoArrayj+1} dentro del array `
-}
-console.log(datos2(array1, nuevoArray));
+    }     return `No existe el numero ${num1} o ${num1+1} dentro del array `
+// }
+console.log(datos2(array1, num1));
