@@ -33,3 +33,15 @@ function datos (array, numero) {
 console.log(datos(array1, numero1));
 console.log(datos(array2, numero2));
 console.log(datos(array3, numero3));
+
+// Para encontrar el numero mas grande  de una lista
+const lista = [45, 12, 67, 89, 34, 22];
+let maximo = lista[0]; // Suponemos que el primer elemento es el máximo
+
+for (let i = 1; i < lista.length; i++) {
+  if (lista[i] > maximo) {
+    maximo = lista[i];
+  }
+}
+
+console.log('El número más alto en la lista es:', maximo);

@@ -16,32 +16,54 @@ connection.connect(function(error) {
 });
 
 // Hacer una consulta
-connection.query("select * from usuarios", function(error, result, fields) { 
+connection.query("select * from empleados", function(error, result, fields) { 
     if (error) {
         return console.error(`error: ${error.message}`);
     }
-    // console.log(result); // Esto lista los objetos dentro de la tabla usuarios
     
-  
     // Ordenar los datos de la tabla, propiedad nombre, alfabeticamente
 
-    // PENDIENTE POR HACER
-    // for (let j = 0; j < result.length; j++) {
-    //     for (let i = 0; i < j; i++) {
-    //         if (result[i].Nombre > result[i + 1].Nombre) {
-    //             let aux = result[i];
-    //             result[i] = result[i + 1];
-    //             result[i + 1] = aux;
-               
-    //         } 
-    //     } 
+    // let listaOrdenada = [];
+    // for (let i = 0; i < result.length; i++) {
+    //   let incluido = false;
+    //   for (let j = 0; j < listaOrdenada.length; j++) {
+    //     if (result[i].Nombre < listaOrdenada[j].Nombre) {
+    //       for (let k = listaOrdenada.length; k > j; k-- ){
+    //           listaOrdenada[k] = listaOrdenada[k -1];
+    //       }
+    //       listaOrdenada[j] = result[i];
+    //       incluido = true;
+    //       break;
+    //     }
+    //   }
+    //   if (!incluido){
+    //     listaOrdenada[listaOrdenada.length] = result[i];
+    //   }
     // }
-    // console.log(result)
-    // HASTA AQUI HE LLEGADO CON EL ORDENAR POR NOMBRE
-    
+    // console.log(listaOrdenada);
  
-    
-});
+}); // Aquí termina la busqueda de la ordenar alfabeticamentelos noombres
+
+
+
+ // Mostrar el salario mas alto.
+// connection.query("select * from empleados", function(error, result, fields) {
+//     if (error) {
+//         console.error(`error: ${error.message}`)
+//     }
+
+//     let salarioMayor= result[0].Salario;
+
+//     for (let i = 1; i < result.length; i++) { 
+//     if (result[i].Salario > salarioMayor) {
+//         salarioMayor = result[i].Salario;
+//     }
+//     } console.log(salarioMayor) ;
+// }) 
+    // Termina el salario mas alto
+
+
+//  Ordenar los apellidos de Z a A.
 
 connection.query("select * from empleados", function(error, result, fields) {
     if (error) {
@@ -49,19 +71,50 @@ connection.query("select * from empleados", function(error, result, fields) {
     }
 
     
-    
-    // Mostrar el salario mas alto.
-for (let j = 0; j < result.length; j++) {
-    for (let i: 0; i < result.length; i++)
-    if (result[i].Salario > result[i + 1].Salario) {
-
-        console.log(result[i].Salario)  
+    let listaOrdenada = []; 
+    for (let i = 0; i < result.length; i++) { 
+        let incluido = false;
+        for (let j = 0; j < listaOrdenada.length; j++) {
+            if (result[i].Apellidos > listaOrdenada[j].Apellidos) {
+                for (let k = listaOrdenada.length; k > j; k--) {
+                    listaOrdenada[k] = listaOrdenada[k -1];
+                }
+                listaOrdenada[j] = result[i];
+                incluido = true;
+                break;
+            }
+        }
+        if (!incluido) {
+            listaOrdenada[listaOrdenada.length] = result[i];
+        }
     }
+    console.log(listaOrdenada);
+
+    // let listaOrdenada = [];
+    // for (let i = 0; i < result.length; i++) {
+    //   let incluido = false;
+    //   for (let j = 0; j < listaOrdenada.length; j++) {
+    //     if (result[i].Nombre < listaOrdenada[j].Nombre) {
+    //       for (let k = listaOrdenada.length; k > j; k-- ){
+    //           listaOrdenada[k] = listaOrdenada[k -1];
+    //       }
+    //       listaOrdenada[j] = result[i];
+    //       incluido = true;
+    //       break;
+    //     }
+    //   }
+    //   if (!incluido){
+    //     listaOrdenada[listaOrdenada.length] = result[i];
+    //   }
+    // }
+    // console.log(listaOrdenada);
+    
+   
 }
+) 
+    // Termina el salario mas alto
 
- 
 
-}) 
 
 
 
