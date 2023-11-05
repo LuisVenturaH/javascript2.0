@@ -89,30 +89,9 @@ connection.query("select * from empleados", function(error, result, fields) {
         }
     }
     console.log(listaOrdenada);
-
-    // let listaOrdenada = [];
-    // for (let i = 0; i < result.length; i++) {
-    //   let incluido = false;
-    //   for (let j = 0; j < listaOrdenada.length; j++) {
-    //     if (result[i].Nombre < listaOrdenada[j].Nombre) {
-    //       for (let k = listaOrdenada.length; k > j; k-- ){
-    //           listaOrdenada[k] = listaOrdenada[k -1];
-    //       }
-    //       listaOrdenada[j] = result[i];
-    //       incluido = true;
-    //       break;
-    //     }
-    //   }
-    //   if (!incluido){
-    //     listaOrdenada[listaOrdenada.length] = result[i];
-    //   }
-    // }
-    // console.log(listaOrdenada);
-    
-   
 }
 ) 
-    // Termina el salario mas alto
+    // Termina ordenar los apellidos de Z a A.
 
 
 

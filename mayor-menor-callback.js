@@ -1,3 +1,4 @@
+
 let listado = [ 1, 5, 12, 8, 7, 23, 8, 2 ];
 
 function esMayor(a, b) {
