@@ -58,7 +58,7 @@
 // console.log(suma)
 
 
-// ENCONTRAR NUMERO MAS ALTO Y MAS BAJO
+
 let arrayNumero = [5, 2, 10, 88, 6, 99, 8, 7, 56, 1236, 478, 125, 6];
 let numeroAlto = arrayNumero[0];
 let numeroBajo = arrayNumero[0];
@@ -80,6 +80,17 @@ resultadoSumaElementos += arrayNumero[i];
 }
 console.log("El resultado de sumar todos los elementos es: " + resultadoSumaElementos)
 
+// SACA LA MEDIA DEL RESULTADO DE LA SUMAR TODOS LOS ELEMENTOS
+
+let sumaResultado = arrayNumero[0];
+let mediaSumaResultado = 0;
+for (let i = 1; i < arrayNumero.length; i++) {
+sumaResultado += arrayNumero[i];
+mediaSumaResultado = sumaResultado / arrayNumero.length;
+}
+
+
+console.log("El media de sumar todos los elementos es: " + mediaSumaResultado)
 
 // // SACA EL NUMERO MAS ALTO
 for (let i=1; i < arrayNumero.length; i++) {
@@ -124,6 +135,8 @@ console.log("La suma de los numeros pares es: " + sumaPares)
 // }
 // console.log(total)
 
+
+// SACAR LA SUMA DE LOS PARES
 // const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // let sumaPares = 0;
 

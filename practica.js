@@ -57,5 +57,40 @@
 // }
 // console.log(suma)
 
+// function numeroRandon() {
+// const numRandom = Math.floor(Math.random() * 10) + 1;
+//   console.log(numRandom);  
 
+// }
+
+
+
+let contadorSegundos = 0;
+let contadorMinutos = 0;
+let contadorHora = 0;
+
+function contarCadaSegundo(segundos, minutos, horas) {
+  const intervaloSeg = setInterval(() => {
+    // console.log(`Segundos: ${contadorSegundos}`);
+    segundos = (segundos % 60) + 1; // Reiniciar el contador después de llegar a 60
+  }, 10); // 1000 milisegundos = 1 segundo
+
+
+  const intervaloMin = setInterval(() => {
+    // console.log(`Minutos: ${contadorMinutos}`);
+    minutos = (contadorSegundos % 60) + 1; // Reiniciar el contador después de llegar a 60
+  }, 100); // 1000 milisegundos = 1 segundo
+
+
+  const intervaloHora = setInterval(() => {
+    // console.log(`Hora: ${contadorHora}`);
+    horas = (contadorSegundos % 60) + 1; // Reiniciar el contador después de llegar a 60
+  }, 1000); // 1000 milisegundos = 1 segundo
+
+
+  console.log(`Segundos: ${segundos} Minutos: ${minutos}  Horas: ${horas}  `)
+}
+
+// Ejecutar el contador cada segundo
+contarCadaSegundo(1, 1, 1);
 
